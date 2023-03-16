@@ -1,0 +1,33 @@
+.buttonGeneral{ /* Formating for general use buttons */
+    background-color: #8C8C8C;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.buttonGeneral:hover{ /* What changes occur to the general use buttons when they are hovered over */
+    background-color: #9F9F9F;
+}
+
+.buttonHeader{ /* Formating for the buttons used in the header */
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 500ms;
+    width: 125px;
+    height: 50px;
+}
+
+.buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over */
+    color: #0C8DC2;
+    background-color: #F2F2F2;
+}
