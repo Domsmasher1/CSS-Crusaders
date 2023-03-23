@@ -1,3 +1,7 @@
+/* 
+Formating for general button
+Used for general button usage
+*/
 .buttonGeneral{ /* Formating for general use buttons */
     background-color: #8C8C8C;
     border: none;
@@ -13,6 +17,10 @@
     background-color: #9F9F9F;
 }
 
+/* 
+Formating for Header button
+Used for use in the header
+*/
 .buttonHeader{ /* Formating for the buttons used in the header */
     background-color: #ffffff;
     border: none;
@@ -23,13 +31,54 @@
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 500ms;
-    width: 125px;
+    width: 150px;
     height: 50px;
 }
 
 .buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over */
     color: #0C8DC2;
     background-color: #F2F2F2;
+}
+
+/* 
+Formating for the header's dropdown
+Used for use for dropdown menus in the headers
+*/
+.dropdownButton { /* Formating for button that holds the dropdown element */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+.dropdownContent { /* formating of the content boxes of the dropdown */
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownContent a{  /* formating for the contents of the dropdown boxes*/
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown*/
+
+.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over*/
+  display: block;
+}
+
+.dropdown:hover .dropdownButton { /* Colour changed to when the button is hovered over*/
+  color: #0C8DC2;
+  background-color: #F2F2F2;
 }
 
 .background {
