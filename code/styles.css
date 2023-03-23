@@ -113,3 +113,76 @@ p {
   word-spacing: -1x;
   line-height: 19px;
 }
+
+* { /* Overall styling for the whole document, sets font and general settings to ensure proper function, such as the removal or outlines and margins - Daniel Frankish */
+	font-family: calibri, sans-serif;
+	color: black;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	outline: 0;
+	margin: 0;
+}
+
+nav a { /* styling for each element of the navigation bar list, sets proper colouring and hyperlink styling - Daniel Frankish */
+	text-decoration: none;
+	background-color: #ffffff;
+}
+
+#navbar { /* Overall configuration for the navbar entity, sets color and sizing - Daniel Frankish */
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	border: 0;
+}
+
+#navlist { /* styling for the list that is used to create the navbar, sets proper alignment and sizing - Daniel Frankish */
+	display: inline-block;
+	vertical-align: middle;
+	width: 10%;
+	text-align: center;
+}
+
+body { /* sets the proportions for the overall body of the webpage - Daniel Frankish */
+	height: 100%;
+	width: 100%;
+}
+
+#main { /* styles the main body of the document and sets its proportions - Daniel Frankish */
+	width: 50%;
+	padding: 10px;
+	background-color: #c0c0c0;
+	margin: auto;
+	height: 100vh;
+}
+
+#navbar-image { /*  configures the image for the navbar - Daniel Frankish */
+	width: 100px;
+	display: block;
+}
+
+a { /* Needs replacing do not use - Daniel Frankish */
+	display: block;
+	padding: 8px;
+	background-color: #b0b0b0;
+}
+
+a:hover { /* Needs replacing do not use - Daniel Frankish */
+	background-color: #111;
+}
+
+
+article { /* Colours the main article's background - Daniel Frankish */
+	background-color: #D9D9D9;
+}
+
+
+footer { /* Creates a footer component for the website that covers the width of the screen and follows along with page scrolling. - Daniel Frankish */
+	background-color: #3ABFAA;
+	position: fixed;
+	padding: 10px 0px 0px 10px;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+}
+
+
