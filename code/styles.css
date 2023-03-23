@@ -31,3 +31,27 @@
     color: #0C8DC2;
     background-color: #F2F2F2;
 }
+
+.background {
+  background-image: url("background_immage.jpg");
+  background-size: cover; 
+  display: block; 
+  min-width: 1000px;
+  margin: 0; 
+  
+}
+
+.forground{
+  
+  background-color: lightblue;
+  max-width: 1000px;
+  margin: auto;
+  min-width: 1000px;
+  width: 50%;
+  padding: 10px;
+  
+  
+}
+
+
+
