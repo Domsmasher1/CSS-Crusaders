@@ -92,3 +92,19 @@ Creates a background image on the page
   min-width: 1000px;
   margin: 0; 
 }
+
+/*
+Imports font from google fonts
+Sets paragraph styling
+Note: doesn't set any text positioning as that may vary depending on where it is being used
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0px;
+  word-spacing: -1x;
+  line-height: 19px;
+}
