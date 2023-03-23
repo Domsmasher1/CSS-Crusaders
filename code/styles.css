@@ -81,7 +81,7 @@ Used for use for dropdown menus in the headers
   background-color: #F2F2F2;
 }
 
-.background {
+.background { /* makes your webpage have an epic background!!!11111! */ 
   background-image: url("background_immage.jpg");
   background-size: cover; 
   display: block; 
@@ -90,7 +90,7 @@ Used for use for dropdown menus in the headers
   
 }
 
-.forground{
+.forground{ /* makes your text go blue babudi babu die */
   
   background-color: lightblue;
   max-width: 1000px;
