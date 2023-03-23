@@ -81,26 +81,14 @@ Used for use for dropdown menus in the headers
   background-color: #F2F2F2;
 }
 
-.background { /* makes your webpage have an epic background!!!11111! */ 
-  background-image: url("background_immage.jpg");
+/*
+Background
+Creates a background image on the page
+*/
+.background { /* makes your webpage have a background!*/ 
+  background-image: url("background_image.jpg");
   background-size: cover; 
   display: block; 
   min-width: 1000px;
   margin: 0; 
-  
 }
-
-.forground{ /* makes your text go blue babudi babu die */
-  
-  background-color: lightblue;
-  max-width: 1000px;
-  margin: auto;
-  min-width: 1000px;
-  width: 50%;
-  padding: 10px;
-  
-  
-}
-
-
-
