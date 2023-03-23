@@ -1,8 +1,9 @@
 /* 
 Formating for general button
 Used for general button usage
+Author: Dominic White
 */
-.buttonGeneral{ /* Formating for general use buttons */
+.buttonGeneral{ /* Formating for general use buttons, Author: Dominic White*/
     background-color: #8C8C8C;
     border: none;
     color: white;
@@ -13,15 +14,16 @@ Used for general button usage
     margin: 4px 2px;
 }
 
-.buttonGeneral:hover{ /* What changes occur to the general use buttons when they are hovered over */
+.buttonGeneral:hover{ /* What changes occur to the general use buttons when they are hovered over, Author: Dominic White*/
     background-color: #9F9F9F;
 }
 
 /* 
 Formating for Header button
 Used for use in the header
+Author: Dominic White
 */
-.buttonHeader{ /* Formating for the buttons used in the header */
+.buttonHeader{ /* Formating for the buttons used in the header, Author: Dominic White*/
     background-color: #ffffff;
     border: none;
     color: black;
@@ -35,7 +37,7 @@ Used for use in the header
     height: 50px;
 }
 
-.buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over */
+.buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over, Author: Dominic White*/
     color: #0C8DC2;
     background-color: #F2F2F2;
 }
@@ -43,8 +45,9 @@ Used for use in the header
 /* 
 Formating for the header's dropdown
 Used for use for dropdown menus in the headers
+Author: Dominic White
 */
-.dropdownButton { /* Formating for button that holds the dropdown element */
+.dropdownButton { /* Formating for button that holds the dropdown element, Author: Dominic White*/
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: 16px;
@@ -54,7 +57,7 @@ Used for use for dropdown menus in the headers
   transition-duration: 500ms;
 }
 
-.dropdownContent { /* formating of the content boxes of the dropdown */
+.dropdownContent { /* formating of the content boxes of the dropdown, Author: Dominic White*/
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -63,20 +66,20 @@ Used for use for dropdown menus in the headers
   z-index: 1;
 }
 
-.dropdownContent a{  /* formating for the contents of the dropdown boxes*/
+.dropdownContent a{  /* formating for the contents of the dropdown boxes, Author: Dominic White*/
   color: rgb(0, 0, 0);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown*/
+.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown, Author: Dominic White*/
 
-.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over*/
+.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over, Author: Dominic White*/
   display: block;
 }
 
-.dropdown:hover .dropdownButton { /* Colour changed to when the button is hovered over*/
+.dropdown:hover .dropdownButton { /* Colour changed to when the button is hovered over, Author: Dominic White*/
   color: #0C8DC2;
   background-color: #F2F2F2;
 }
@@ -84,8 +87,9 @@ Used for use for dropdown menus in the headers
 /*
 Background
 Creates a background image on the page
+Author: Jack Spong
 */
-.background { /* makes your webpage have a background!*/ 
+.background { /* makes your webpage have a background! Author: Jack Spong*/ 
   background-image: url("background_image.jpg");
   background-size: cover; 
   display: block; 
@@ -97,6 +101,7 @@ Creates a background image on the page
 Imports font from google fonts
 Sets paragraph styling
 Note: doesn't set any text positioning as that may vary depending on where it is being used
+Author: Charlie O'neill
 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 p {
