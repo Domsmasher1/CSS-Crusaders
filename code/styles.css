@@ -3,7 +3,7 @@ Formating for general button
 Used for general button usage
 Author: Dominic White
 */
-.buttonGeneral{ /* Formating for general use buttons, Author: Dominic White*/
+.buttonGeneral{ /* Formating for general use buttons, - Dominic White*/
     background-color: #8C8C8C;
     border: none;
     color: white;
@@ -12,9 +12,11 @@ Author: Dominic White
     text-decoration: none;
     font-size: 16px;
     margin: 4px 2px;
+    width: 150px;
+    height: 50px;
 }
 
-.buttonGeneral:hover{ /* What changes occur to the general use buttons when they are hovered over, Author: Dominic White*/
+.buttonGeneral:hover{ /* What changes occur to the general use buttons when they are hovered over, - Dominic White*/
     background-color: #9F9F9F;
 }
 
@@ -23,21 +25,20 @@ Formating for Header button
 Used for use in the header
 Author: Dominic White
 */
-.buttonHeader{ /* Formating for the buttons used in the header, Author: Dominic White*/
+.buttonHeader{ /* Formating for the buttons used in the header - Dominic White*/
     background-color: #ffffff;
     border: none;
     color: black;
-    padding: 15px 16px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     margin: 4px 2px;
     transition-duration: 500ms;
     width: 150px;
     height: 50px;
 }
 
-.buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over, Author: Dominic White*/
+.buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over - Dominic White*/
     color: #0C8DC2;
     background-color: #F2F2F2;
 }
@@ -47,17 +48,12 @@ Formating for the header's dropdown
 Used for use for dropdown menus in the headers
 Author: Dominic White
 */
-.dropdownButton { /* Formating for button that holds the dropdown element, Author: Dominic White*/
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  transition-duration: 500ms;
+.dropdown { /*Spesifcations for the dropdown - Dominic white*/
+  position: relative;
+  display: inline-block;
 }
 
-.dropdownContent { /* formating of the content boxes of the dropdown, Author: Dominic White*/
+.dropdownContent { /* formating of the content boxes of the dropdown - Dominic White*/
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -66,30 +62,27 @@ Author: Dominic White
   z-index: 1;
 }
 
-.dropdownContent a{  /* formating for the contents of the dropdown boxes, Author: Dominic White*/
+.dropdownContent a{  /* formating for the contents of the dropdown boxes - Dominic White*/
   color: rgb(0, 0, 0);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown, Author: Dominic White*/
+.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown - Dominic White*/
 
-.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over, Author: Dominic White*/
+.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over - Dominic White*/
   display: block;
 }
 
-.dropdown:hover .dropdownButton { /* Colour changed to when the button is hovered over, Author: Dominic White*/
-  color: #0C8DC2;
-  background-color: #F2F2F2;
-}
+
 
 /*
 Background
 Creates a background image on the page
 Author: Jack Spong
 */
-.background { /* makes your webpage have a background! Author: Jack Spong*/ 
+.background { /* makes your webpage have a background! - Jack Spong*/ 
   background-image: url("background_image.jpg");
   background-size: cover; 
   display: block; 
@@ -127,7 +120,7 @@ p {
 This series of elements works to build the overal navbar which is used on each page of the website as a header.
 It includes images, links and other aesthetic components.
 It also includes the footer element which remains at the bottom of the user's webpage.
-- Daniel Frankish
+Author: Daniel Frankish
 */
 
 nav a { /* styling for each element of the navigation bar list, sets proper colouring and hyperlink styling - Daniel Frankish */
@@ -154,11 +147,11 @@ nav a { /* styling for each element of the navigation bar list, sets proper colo
 	display: block;
 }
 
-a { /* Needs replacing do not use - Daniel Frankish */
+/* a {  Needs replacing do not use - Daniel Frankish 
 	display: block;
 	padding: 8px;
 	background-color: #b0b0b0;
-}
+} */
 
 a:hover { /* Needs replacing do not use - Daniel Frankish */
 	background-color: #111;
@@ -167,7 +160,7 @@ a:hover { /* Needs replacing do not use - Daniel Frankish */
 /*
 These elements define the fundemental heirarchy of the main content of the page.
 Descending from the body to the main articles of the webpage.
-- Daniel Frankish
+Author: Daniel Frankish
 */
 
 body { /* sets the proportions for the overall body of the webpage - Daniel Frankish */
@@ -175,9 +168,10 @@ body { /* sets the proportions for the overall body of the webpage - Daniel Fran
 	width: 100%;
 }
 
-#main { /* styles the main body of the document and sets its proportions - Daniel Frankish */
+.main { /* styles the main body of the document and sets its proportions - Daniel Frankish */
 	width: 50%;
 	padding: 10px;
+  padding-top: 100px;
 	background-color: #c0c0c0;
 	margin: auto;
 	height: 100vh;
@@ -186,7 +180,6 @@ body { /* sets the proportions for the overall body of the webpage - Daniel Fran
 article { /* Colours the main article's background - Daniel Frankish */
 	background-color: #D9D9D9;
 }
-
 
 footer { /* Creates a footer component for the website that covers the width of the screen and follows along with page scrolling. - Daniel Frankish */
 	background-color: #3ABFAA;
@@ -198,3 +191,93 @@ footer { /* Creates a footer component for the website that covers the width of 
 }
 
 
+/*
+Header
+These elements are used for creating and manipulatying the header
+Author: Dominic White
+*/
+header { /* Creates a white header at the top of the page. - Dominic White*/
+	background-color: #ffffff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+}
+
+/*
+Center
+This aligns eleents to the center
+Author: Dominic White
+*/
+.centerText{ /* Centers text - Dominic White*/
+  text-align: center;
+}
+
+.centerElements { /* Centers elements in the header - Dominic White*/
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.centerBox{
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  padding: 5px;
+  background-color: white;
+  outline: black;
+  outline-style: solid;
+  outline-width: 2px;
+} 
+
+/*
+Colour background
+Gives the elements a background color and a box
+Author: Dominic White
+*/
+.headingGray{
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 2px;
+  padding-bottom: 10px;
+  background-color: #A2A1A1;
+}
+
+/*
+Limitations
+Anything to do with limiting or changing how an element works 
+Author: Dominic White
+*/
+textarea { /*Setups limitations for the text area - Dominic White*/
+  resize:none;
+  width: 100%;
+  height: 200px;
+}
+
+.wrap200 { /*Gets a div thats 100% the size of the page - Dominic White */
+  width: 100%;
+  height: 200px;
+}
+
+.wrap50 { /*Gets a div thats 100% the width of the page - Dominic White */
+  width: 100%;
+  height: 50px;
+}
+  
+.floatLeft { /*Splits the div in two, putting elements on the left side - Dominic White*/
+  float:left; 
+  width: 50%;
+}
+  
+.floatRight { /*Splits the div in two, putting elements on the right side - Dominic White*/
+  float: right;
+  width: 50%;
+}
+
+.padding10{ /* 10% padding on lefr and right - Dominic White*/
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.floatRight{ /*Floats elements right*/
+  float: right;
+}
