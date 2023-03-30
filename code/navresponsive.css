@@ -1,0 +1,51 @@
+/*
+filename: navresponsive.css
+author: Daniel Frankish
+created:
+last modified:
+description: this references the navbar on each page
+*/
+
+@media screen and (max-width: 1280px) and (min-width: 360px) {
+    nav ol li {
+        width: 30%;
+    }
+    
+    .buttonHeader {
+        width: 30%;
+    }
+
+    #navbar-image {
+        width: 20%;
+        height: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    nav ol li {
+        width: 48%;
+    }
+
+    .buttonHeader {
+        width: 48%;
+        font-size: 0.5em
+    }
+
+    #navbar-image {
+        width: 20%;
+        height: 20%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}  
+
+
+
+
+
+
+
+
+
