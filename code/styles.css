@@ -20,63 +20,6 @@ Author: Dominic White
     background-color: #9F9F9F;
 }
 
-/* 
-Formating for Header button
-Used for use in the header
-Author: Dominic White
-*/
-.buttonHeader{ /* Formating for the buttons used in the header - Dominic White*/
-    background-color: #ffffff;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
-    margin: 4px 2px;
-    transition-duration: 500ms;
-    width: 150px;
-    height: 50px;
-}
-
-.buttonHeader:hover{ /* What changes occur to the header buttons when they are hovered over - Dominic White*/
-    color: #0C8DC2;
-    background-color: #F2F2F2;
-}
-
-/* 
-Formating for the header's dropdown
-Used for use for dropdown menus in the headers
-Author: Dominic White
-*/
-.dropdown { /*Spesifcations for the dropdown - Dominic white*/
-  position: relative;
-  display: inline-block;
-}
-
-.dropdownContent { /* formating of the content boxes of the dropdown - Dominic White*/
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdownContent a{  /* formating for the contents of the dropdown boxes - Dominic White*/
-  color: rgb(0, 0, 0);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown - Dominic White*/
-
-.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over - Dominic White*/
-  display: block;
-}
-
-
-
 /*
 Background
 Creates a background image on the page
@@ -117,10 +60,11 @@ p {
 }
 
 /*
-This series of elements works to build the overal navbar which is used on each page of the website as a header.
-It includes images, links and other aesthetic components.
-It also includes the footer element which remains at the bottom of the user's webpage.
-Author: Daniel Frankish
+filename: navstyle.css
+author: Daniel Frankish
+created:
+last modified:
+description: this references the navbar on each page
 */
 
 nav a { /* styling for each element of the navigation bar list, sets proper colouring and hyperlink styling - Daniel Frankish */
@@ -135,11 +79,29 @@ nav a { /* styling for each element of the navigation bar list, sets proper colo
 	border: 0;
 }
 
-#navlist { /* styling for the list that is used to create the navbar, sets proper alignment and sizing - Daniel Frankish */
+/*
+#navlist { / styling for the list that is used to create the navbar, sets proper alignment and sizing - Daniel Frankish /
 	display: inline-block;
 	vertical-align: middle;
 	width: 10%;
 	text-align: center;
+}
+*/
+
+.buttonHeader{ /* Formating for the buttons used in the header - Dominic White*/
+    display: inline-block;
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    width: 10%;
+    vertical-align: middle;
+}
+
+.buttonGeneral:hover{ /* What changes occur to the general use buttons when they are hovered over, - Dominic White*/
+    background-color: #9F9F9F;
 }
 
 #navbar-image { /*  configures the image for the navbar - Daniel Frankish */
@@ -147,16 +109,47 @@ nav a { /* styling for each element of the navigation bar list, sets proper colo
 	display: block;
 }
 
-/* a {  Needs replacing do not use - Daniel Frankish 
+
+a { /* Needs replacing do not use - Daniel Frankish */
+    transition-duration: 500ms;
 	display: block;
 	padding: 8px;
 	background-color: #b0b0b0;
-} */
-
-a:hover { /* Needs replacing do not use - Daniel Frankish */
-	background-color: #111;
 }
 
+
+
+a:hover { /* Needs replacing do not use - Daniel Frankish */
+	background-color: #9F9F9F;
+}
+
+
+.dropdown { /*Spesifcations for the dropdown - Dominic white*/
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdownContent { /* formating of the content boxes of the dropdown - Dominic White*/
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdownContent a{  /* formating for the contents of the dropdown boxes - Dominic White*/
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdownContent a:hover {background-color: #f1f1f1} /*The colour when hovering over a button in the dropdown - Dominic White*/
+  
+.dropdown:hover .dropdownContent {/* Displays dropdown when the button is hovered over - Dominic White*/
+    display: block;
+}
 /*
 These elements define the fundemental heirarchy of the main content of the page.
 Descending from the body to the main articles of the webpage.
@@ -188,20 +181,6 @@ footer { /* Creates a footer component for the website that covers the width of 
 	bottom: 0;
 	width: 100%;
 	height: 40px;
-}
-
-
-/*
-Header
-These elements are used for creating and manipulatying the header
-Author: Dominic White
-*/
-header { /* Creates a white header at the top of the page. - Dominic White*/
-	background-color: #ffffff;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 80px;
 }
 
 /*
