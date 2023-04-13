@@ -309,3 +309,34 @@ padding-right: 10%;
 .floatRight{ /*Floats elements right*/
 float: right;
 }
+
+  .inputBox{ /* Replacment for the default input box in input fields - By Jack Spong */
+    margin: 5px;
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+    padding: 10px;
+    padding-left: 5px;
+    padding-right: 5px; 
+    background-color: rgb(255, 255, 255);
+    outline: black;
+    outline-style: solid;
+    outline-width: 2px;
+    max-width: 48%;  
+    width: 25%;      
+  
+  }
+
+  .input { /* Formats input field to remove there default box surrounding the input - By Jack Spong */
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0px;
+    word-spacing: -1x;
+    line-height: 19px;
+
+  }
