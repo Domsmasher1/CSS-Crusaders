@@ -281,7 +281,7 @@ width: 100%;
 height: 200px;
 }
 
-.wrap100 { /Gets a div thats 100% the width of the page - Dominic White/
+.wrap100 { /*Gets a div thats 100% the width of the page - Dominic White*/
   width: 100%;
   height: 100px;
 }
