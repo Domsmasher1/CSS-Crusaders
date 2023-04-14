@@ -157,9 +157,17 @@ a:hover { /* Needs replacing do not use - Daniel Frankish */
   Author: Daniel Frankish
 */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body { /* sets the proportions for the overall body of the webpage - Daniel Frankish */
   height: 100%;
   width: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
 .main { /* styles the main body of the document and sets its proportions - Daniel Frankish */
@@ -391,4 +399,49 @@ address {
 
 .grayBorder{ /*Creates a 1px gray border*/
   border: 1px solid rgb(103, 102, 102);
+}
+
+dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+figure {
+    margin: 1em 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+    margin: 0.5em 0 1em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    border: 1px solid #ddd;
 }
