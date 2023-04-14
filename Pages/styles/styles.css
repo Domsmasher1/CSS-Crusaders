@@ -460,3 +460,12 @@ Author: Charlie O'neill
 #textdeco{
   text-decoration: none;
 }
+
+/*
+Centres images
+Author: Charlie O'neill
+*/
+.listing_icon{
+  margin-left: 100px;
+  margin-right: auto;
+}
