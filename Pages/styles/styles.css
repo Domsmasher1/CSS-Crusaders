@@ -96,7 +96,7 @@ nav a { /* styling for each element of the navigation bar list, sets proper colo
   text-align: center;
   text-decoration: none;
   margin: 4px 2px;
-  width: 10%;
+  width: 11%;
   vertical-align: middle;
 }
 
@@ -316,9 +316,9 @@ textarea { /*Setups limitations for the text area - Dominic White*/
 }
 
 
-.wrap200 { /*Gets a div thats 100% the size of the page - Dominic White */
+.wrap250 { /*Gets a div thats 100% the size of the page - Dominic White */
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 
 .wrap100 { /*Gets a div thats 100% the width of the page - Dominic White */
@@ -448,5 +448,7 @@ th {
 }
 
 td {
-    border: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
+
+ol, ul {padding-left: 10%;}
