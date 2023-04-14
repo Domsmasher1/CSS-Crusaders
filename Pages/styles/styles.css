@@ -397,7 +397,9 @@ address {
 }
 
 /*
-for the about page definition list CSS*/
+for the about page definition list CSS
+Author: Ahnaf Tajwar Afif
+*/
 dl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -425,6 +427,7 @@ figcaption {
 
 /*
 For the timetable in About page
+Author: Ahnaf Tajwar Afif
 */
 table {
     border-collapse: collapse;
