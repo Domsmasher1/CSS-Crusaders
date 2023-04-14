@@ -401,6 +401,8 @@ address {
   border: 1px solid rgb(103, 102, 102);
 }
 
+/*
+for the about page definition list CSS*/
 dl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -426,6 +428,9 @@ figcaption {
     margin: 0.5em 0 1em;
 }
 
+/*
+For the timetable in About page
+*/
 table {
     border-collapse: collapse;
     width: 100%;
