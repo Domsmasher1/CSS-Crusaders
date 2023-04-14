@@ -452,3 +452,11 @@ td {
 }
 
 ol, ul {padding-left: 10%;}
+
+/*
+Removes the underline fro ntext on the job page due to the listings being linke via an a element
+Author: Charlie O'neill
+*/
+#textdeco{
+  text-decoration: none;
+}
