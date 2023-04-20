@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="description" content="test website for inquiry project">
   <meta name="keywords" content="HTML5, tags">
-  <meta name="author" content="">
+  <meta name="author" content="Ahnaf">
   <meta name ="Viewport" content="width=device-width, initial scale=1.0">
   <link href="styles/styles.css" rel="stylesheet" media="screen and (max-width: 1920px)">
   <title>About</title>
