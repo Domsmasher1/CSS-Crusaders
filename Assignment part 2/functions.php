@@ -87,13 +87,12 @@
      */
     function findCredentials($username, $password){
         $sqlData = findFromTable("Username", $username, "userData")[0];
-        $dataType = array("Username", "Password");
         $inputCredentials = array("Username" => $username, "Password" => $password);
 
-        foreach($dataType as $field){
-            if($sqlData[$field] == $inputCredentials[$field]) {
-                if($field == $dataType[1]){
-                    return array(true, "Credentials are valid", $sqlData["UserId"]);
+        foreach($inputCredentials as $key => $field){
+            if($sqlData[$key] == $inputCredentials[$key]) {
+                if($key == "Password"){
+                    return array(true, "Credentials are valid", $sqlData["UserID"]);
                 }
             } else break;
         }
@@ -133,12 +132,13 @@
      */
     function login($inOrOut = false, $userId = null){
         if($inOrOut){
-            $sqlUserId = findFromTable("UserID", $userId, "UserData");
-            if(isset($sqlUserId["UserID"])){
+            $sqlUserId = findFromTable("UserID", $userId, "userData");
+            if(!isset($sqlUserId["UserID"])){
                 $_SESSION["UserId"] = $sqlUserId["UserID"];
             } else {
-                cleanup("Unable to find User Id", array("login.php", "index.php"));
+                $error = "Unable to find User Id";
             }
+            cleanup($error, array("login.php", "index.php"));
         } else {
             if(isset($_SESSION["UserId"])){
                 unset($_SESSION["UserId"]);
