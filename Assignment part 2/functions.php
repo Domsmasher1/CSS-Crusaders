@@ -47,6 +47,7 @@
     function findFromTable($dataName, $dataValue, $table) {
         $connection = $_SESSION["Connection"];
         $output = array();
+        $dataValue = sanitiesInputs($dataValue);
 
         if ($dataName == "*" and $dataValue == "*") {
             $query = "SELECT * FROM $table";
@@ -161,5 +162,17 @@
             }
         }
         return false;
+    }
+
+     /**
+     * Removes special characters from input
+     * @param string $value - The input to be sanitiesed
+     * @return string - returns the sanitied value
+     */
+    function sanitiesInputs($value){
+        $value = trim($value);
+        $value = stripslashes($value);
+        $value = htmlspecialchars($value);
+        return $value;
     }
 ?>
