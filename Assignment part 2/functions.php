@@ -86,17 +86,21 @@
      * @return array - returns a success or fail msg with extra data depending on what happens
      */
     function findCredentials($username, $password){
-        $sqlData = findFromTable("Username", $username, "userData")[0];
+        $sqlData = findFromTable("Username", $username, "userData");
         $inputCredentials = array("Username" => $username, "Password" => $password);
 
-        foreach($inputCredentials as $key => $field){
-            if($sqlData[$key] == $inputCredentials[$key]) {
-                if($key == "Password"){
-                    return array(true, "Credentials are valid", $sqlData["UserID"]);
-                }
-            } else break;
+        if(isset($sqlData) and $sqlData != ""){
+            $sqlData = $sqlData[0];
+            foreach($inputCredentials as $key => $field){
+                if($sqlData[$key] == $inputCredentials[$key]) {
+                    if($key == "Password"){
+                        return array(true, "Credentials are valid", $sqlData["UserID"]);
+                    }
+                } else break;
+            }
+            return array(false, "Failed to login, Username or Password is incorrect");
         }
-        return array(false, "Failed to login, Username or Password is incorrect");
+        return array(false, "Please enter a username and password");
     }
 
     /**
@@ -131,12 +135,13 @@
      * @return void
      */
     function login($inOrOut = false, $userId = null){
+        $error = false;
         if($inOrOut){
-            $sqlUserId = findFromTable("UserID", $userId, "userData");
-            if(!isset($sqlUserId["UserID"])){
+            $sqlUserId = findFromTable("UserID", $userId, "userData")[0];
+            if(isset($sqlUserId["UserID"]) and $sqlUserId["UserID"] != ""){
                 $_SESSION["UserId"] = $sqlUserId["UserID"];
             } else {
-                $error = "Unable to find User Id";
+                $error = "User does not exist";
             }
             cleanup($error, array("login.php", "index.php"));
         } else {
