@@ -172,7 +172,7 @@
      /**
      * Removes special characters from input
      * @param string $value - The input to be sanitiesed
-     * @return string - returns the sanitied value
+     * @return string - returns the sanitied value 
      */
     function sanitiesInputs($value){
         $value = trim($value);
