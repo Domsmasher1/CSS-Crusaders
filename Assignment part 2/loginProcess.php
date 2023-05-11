@@ -12,7 +12,6 @@
         }
 
         $validCredentials = findCredentials($_POST["Username"], $_POST["Password"]);
-        print_r($validCredentials);
         if($validCredentials[0] == true){
             login(true, $validCredentials[2]);
         } else {
