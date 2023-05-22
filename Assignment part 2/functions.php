@@ -160,17 +160,15 @@
 
     /**
      * Verifies the user id, and if they cant be verified, sends them to the login page
-     * @return bool - returns true or false depending on if the user id can be verified
+     * @return void - if the user id does not match, sends them to the login page
      * Author - Dominic White
      */
     function verifyUserId()
     {
         if(isset($_SESSION["UserId"])){
-            $sqlUserId = findFromTable("UserID", $_SESSION["UserId"], "UserData");
+            $sqlUserId = findFromTable("UserID", $_SESSION["UserId"], "UserData")[0];
             if(!isset($sqlUserId["UserID"]) or $sqlUserId["UserID"] != $_SESSION["UserId"]){
                 cleanup("No valid user found, please login again", array("login.php", "index.php"));
-            } else {
-                return true;
             }
         }
         cleanup("No valid user found, please login again", array("login.php", "index.php"));
