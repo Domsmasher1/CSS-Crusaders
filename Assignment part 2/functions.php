@@ -8,6 +8,7 @@
      * Runs though all the session variables provided and makes sure they exist
      * @param array $variables - a array full of all the variables you are initializing
      * @return string - Message to tell that it worked for debuging
+     * Author - Dominic White
      */
     function intialiseSessionVariables($variables){
         foreach($variables as $variable){
@@ -24,6 +25,7 @@
      * @param string $dataValue - Name of data value, eg 3
      * @param string $table - Table to be accessed, eg UserData
      * @return string - Returns if the query was a success or not
+     * Author - Dominic White
      */
     function deleteFromTable($dataName, $dataValue, $table) {
         $query = "DELETE FROM $table WHERE $dataName = '$dataValue'";
@@ -43,6 +45,7 @@
      * @param string $dataValue - Name of data value, eg 3
      * @param string $table - Table to be accessed, eg UserData
      * @return array|string - Will either return an error message, or the table with the data needed
+     * Author - Dominic White and Jack Spong
      */
     function findFromTable($dataName, $dataValue, $table) {
         $connection = $_SESSION["Connection"];
@@ -84,9 +87,10 @@
      * @param string $username - User's inputed username
      * @param string $password - User's inputed password
      * @return array - returns a success or fail msg with extra data depending on what happens
+     * Author - Dominic White
      */
     function findCredentials($username, $password){
-        $sqlData = findFromTable("Username", $username, "userData");
+        $sqlData = findFromTable("Username", $username, "UserData");
         $inputCredentials = array("Username" => $username, "Password" => $password);
 
         if(isset($sqlData) and $sqlData != ""){
@@ -109,6 +113,7 @@
      * @param array $location - Where to send the user if there is an error or success (first is error, seccond is success)
      * @param array $oldPost - An array of the required post fields, by default equal to username and password
      * @return void
+     * Author - Dominic White
      */
     function cleanup($error, $location, $oldPost = array("Username", "Password")){
         foreach($oldPost as $field){
@@ -133,11 +138,12 @@
      * @param bool $inOrOut - logs the user in or logs them out depending if its true or false, logs out by default
      * @param string $userId - The userid of the user, null by default
      * @return void
+     * Author - Dominic White
      */
     function login($inOrOut = false, $userId = null){
         $error = false;
         if($inOrOut){
-            $sqlUserId = findFromTable("UserID", $userId, "userData")[0];
+            $sqlUserId = findFromTable("UserID", $userId, "UserData")[0];
             if(isset($sqlUserId["UserID"]) and $sqlUserId["UserID"] != ""){
                 $_SESSION["UserId"] = $sqlUserId["UserID"];
             } else {
@@ -155,6 +161,7 @@
     /**
      * Verifies the user id, and if they cant be verified, sends them to the login page
      * @return bool - returns true or false depending on if the user id can be verified
+     * Author - Dominic White
      */
     function verifyUserId()
     {
@@ -166,13 +173,14 @@
                 return true;
             }
         }
-        return false;
+        cleanup("No valid user found, please login again", array("login.php", "index.php"));
     }
 
      /**
      * Removes special characters from input
      * @param string $value - The input to be sanitiesed
-     * @return string - returns the sanitied value 
+     * @return string - returns the sanitied value
+     * Author - Dominic White
      */
     function sanitiesInputs($value){
         $value = trim($value);
@@ -180,4 +188,19 @@
         $value = htmlspecialchars($value);
         return $value;
     }
-?>
+
+    /**
+     * Checks if the key exists in the $_POST array
+     * @param string $name - The name of the field to check
+     * @param string $key - The field to check
+     * @param string $value - The value to return if the field is found
+     * @return mixed - Returns the value of the field if it exists, void otherwise
+     * Author - Dominic White
+     */
+    function keyCheck($name, $key, $value){
+        if ($key == $name) {
+            return $value;
+        }
+    }
+
+    ?>
