@@ -7,9 +7,9 @@
     <meta name ="Viewport" content="width=device-width, initial scale=1.0">
     <link href="styles/styles.css" rel="stylesheet" media="screen and (max-width: 1920px)">
     <title>Accounts</title>
-    <?php 
+    <?php
 	include 'header.inc';
-	verifyUserId(); 
+	verifyUserId();
     ?>
     </head>
 
@@ -69,7 +69,7 @@
 
                 <div class = "wrap50">
                     <div class="floatLeft padding10">
-                        <button class="buttonGeneral"><a href="logout.php">Logout</a></button>
+                        <a href="logout.php" class="buttonGeneral elementLeft">Logout</a>
                     </div>
                     <div class="floatRight padding10">
                         <input type="submit" value="Submit" class="buttonGeneral elementRight">
