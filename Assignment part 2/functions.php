@@ -201,4 +201,65 @@
         }
     }
 
-    ?>
+    /**
+     * Lists all the fields in the EOI table
+     * @return array - returns all the fields in the EOI table
+     * Author - Jack Spong
+     */
+    function listAll() {
+        $result = findFromTable("*", "*", "EOI");
+        return $result;
+    }
+
+    /**
+     * List EOIs for a particular position
+     * @param integer $position - The posision of the field
+     * @return array - Returns the needed fields in the EOI table
+     * Author - Jack Spong
+     */
+    function listPosition($position) {
+        $result = findFromTable("JobRefNum", $position, "EOI");
+        return $result;
+    }
+
+    /**
+     * List EOIs for a particular applicant
+     * @param string $name - Name of the applicant
+     * @return array - Returns the EOIs from the applicant
+     * Author - Jack Spong
+     */
+    function listApplicant($name) {
+        $result = findFromTable("FirstName", $name, "EOI");
+        return $result;
+    }
+
+    /**
+     * Delete EOIs with a specified job reference number
+     * @param string $position - The entry to remove
+     * @return string - The result from the deletion
+     * Author - Jack Spong
+     */
+    function deleteEntry($position) {
+        $result = deleteFromTable("JobRefNum", $position, "EOI");
+        return $result;
+    }
+
+
+    /**
+     * Change the status of an EOI
+     * @param mixed $JobRN - The job reference number
+     * @param mixed $new_status - The changed in status
+     * @return void - Returns nothing
+     * Author - Jack Spong
+     */
+    function statusChange($JobRN, $new_status) {
+        $connection = $_SESSION["Connection"];
+        $sql = "UPDATE EOI SET Stat = '$new_status' WHERE JobRefNum = '$JobRN'";
+        if (mysqli_query($connection, $sql)) {
+        echo "EOI status has been updated successfully. ";
+        } else {
+        echo "Error updating EOI status: " . mysqli_error($connection);
+        }
+        mysqli_close($connection);
+    }
+?>
