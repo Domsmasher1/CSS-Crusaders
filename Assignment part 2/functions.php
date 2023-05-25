@@ -168,10 +168,10 @@
         if(isset($_SESSION["UserId"])){
             $sqlUserId = findFromTable("UserID", $_SESSION["UserId"], "UserData")[0];
             if(!isset($sqlUserId["UserID"]) or $sqlUserId["UserID"] != $_SESSION["UserId"]){
+                echo "Redirecting to login page";
                 cleanup("No valid user found, please login again", array("login.php", "index.php"));
             }
         }
-        cleanup("No valid user found, please login again", array("login.php", "index.php"));
     }
 
      /**
