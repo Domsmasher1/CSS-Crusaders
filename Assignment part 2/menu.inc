@@ -15,7 +15,7 @@ echo "
         </a></li>
         <li class='buttonHeader'><a href='apply2.php'><h2>Apply</h2></a></li>
         <li class='buttonHeader'><a href='about.php'><h2>About</h2></a></li>
-        <li class='buttonHeader'><a href='enhancements.php'><h2>Enhancements</h2></a></li>
+        <li class='buttonHeader'><a href='enhancements2.php'><h2>Enhancements</h2></a></li>
         <li class='buttonHeader'><a href='mailto:csscrusaders@gmail.com'><h2>Contact Us</h2></a></li>
         <li class='buttonHeader'>";
 
