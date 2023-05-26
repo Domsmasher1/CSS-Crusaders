@@ -23,7 +23,7 @@
                 <div class="centerText centerElements">
                     <p class="inputBox">
                         <label for="jobrefnum">Job Reference Number:</label>
-                        <input  type="text" id="jobrefnum" name="jobrefnum" pattern="{5}"><br>
+                        <input  type="text" id="jobrefnum" name="jobrefnum" required pattern="{5}"><br>
                     </p>
                 </div><br>
 
