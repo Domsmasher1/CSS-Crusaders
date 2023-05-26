@@ -62,8 +62,8 @@
 
             echo "Data inserted successfully!";
         }
-        cleanup(implode("<br/>", $error), ["register.php", "login.php"]);
+        cleanup(implode("<br/>", $error), ["accounts.php", "accounts.php"], $oldPost = array("Username", "Password"));
     } else {
-        header("Location: login.php");
+        header("Location: accounts.php");
     }
 ?>
