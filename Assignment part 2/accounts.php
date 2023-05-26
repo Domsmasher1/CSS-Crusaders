@@ -87,6 +87,11 @@
                 </div>
 
         </form>
+	<div class = "wrap50">
+            <div class ="padding10">
+                <a href="manage_form.php" class="buttonGeneral">Management</a>
+            </div>
+        </div>
         </article>
         <footer>
             <?php include 'footer.inc' ?>
