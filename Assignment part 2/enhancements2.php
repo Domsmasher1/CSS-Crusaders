@@ -33,6 +33,7 @@
         </p>
 
         </article>
+        <p><a href="enhancements.php">This links to the original enhancements page</a></p>
         <footer>
             <?php include 'footer.inc' ?>
         </footer>
