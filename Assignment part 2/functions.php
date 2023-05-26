@@ -253,13 +253,14 @@
      * Author - Jack Spong
      */
     function statusChange($JobRN, $new_status) {
-        $connection = $_SESSION["Connection"];
-        $sql = "UPDATE EOI SET Stat = '$new_status' WHERE JobRefNum = '$JobRN'";
-        if (mysqli_query($connection, $sql)) {
-        echo "EOI status has been updated successfully. ";
-        } else {
-        echo "Error updating EOI status: " . mysqli_error($connection);
-        }
-        mysqli_close($connection);
+      $connection = $_SESSION["Connection"];
+      $sql = "UPDATE EOI SET Stat = '$new_status' WHERE JobRefNum = '$JobRN'";
+      if (mysqli_query($connection, $sql)) {
+        $mysqli_msg = "EOI status has been updated successfully. ";
+      } else {
+        $mysqli_msg = "Error updating EOI status: " . mysqli_error($connection);
+      }
+      mysqli_close($connection);
     }
+
 ?>
