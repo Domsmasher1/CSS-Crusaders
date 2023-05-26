@@ -38,16 +38,16 @@
                     <span>
 
                     <label for="FirstName">First Name:</label>
-                    <input class="inputBox input" type="text" id="FirstName" name="FirstName" pattern="[A-Za-z].{,20}" value = <?php echo $autoFillData["FirstName"]?>><br>
+                    <input class="inputBox input" type="text" id="FirstName" name="FirstName" pattern="[A-Za-z].{,20}" value = "<?php echo $autoFillData["FirstName"]?>"><br>
 
                     <label for="LastName">Last Name:</label>
-                    <input class="inputBox input" type="text" id="LastName" name="LastName" pattern="[A-Za-z].{,20}" value = <?php echo $autoFillData["LastName"]?>><br>
+                    <input class="inputBox input" type="text" id="LastName" name="LastName" pattern="[A-Za-z].{,20}" value = "<?php echo $autoFillData["LastName"]?>"><br>
 
                     <label for="Email">Email:</label>
-                    <input class="inputBox input" type="email" id="Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value = <?php echo $autoFillData["Email"]?>><br>
+                    <input class="inputBox input" type="email" id="Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value = "<?php echo $autoFillData["Email"]?>"><br>
 
                     <label for="PhoneNumber">Phone Number:</label>
-                    <input class="inputBox input" type="tel" id="PhoneNumber" name="PhoneNumber" minlength="8" maxlength="12" pattern="[0-9]+" value = <?php echo $autoFillData["PhoneNumber"]?>><br>
+                    <input class="inputBox input" type="tel" id="PhoneNumber" name="PhoneNumber" minlength="8" maxlength="12" pattern="[0-9]+" value = "<?php echo $autoFillData["PhoneNumber"]?>"><br>
 
                     </span>
                 </p><br><br>
@@ -55,10 +55,10 @@
                 <div class="centerBox centerText">
                     <span>
                         <label for="StreetAddress">Street Address:</label>
-                        <input class="inputBox input" type="text" id="StreetAddress" name="StreetAddress" pattern="{40}" value = <?php echo $autoFillData["StreetAddress"]?>><br>
+                        <input class="inputBox input" type="text" id="StreetAddress" name="StreetAddress" pattern="{40}" value = "<?php echo $autoFillData["StreetAddress"]?>"><br>
 
                         <label for="SuburbTown">Suburb/Town:</label>
-                        <input class="inputBox input" type="text" id="SuburbTown" name="SuburbTown" pattern="{40}" value = <?php echo $autoFillData["SuburbTown"]?>><br>
+                        <input class="inputBox input" type="text" id="SuburbTown" name="SuburbTown" pattern="{40}" value = "<?php echo $autoFillData["SuburbTown"]?>"><br>
 
                         <label for="StateTeritory">Select a State or Territory:</label>
                         <select class="inputBox input" id="StateTeritory" name="StateTeritory">
@@ -73,7 +73,7 @@
                         </select><br>
 
                         <label for="PostCode">Post Code:</label>
-                        <input class="inputBox input" type="text" id="PostCode" name="PostCode" maxlength="4" pattern="[0-9]+" value = <?php echo $autoFillData["PostCode"]?>><br>
+                        <input class="inputBox input" type="text" id="PostCode" name="PostCode" maxlength="4" pattern="[0-9]+" value = "<?php echo $autoFillData["PostCode"]?>"><br>
                     </span>
                 </div><br>
 
