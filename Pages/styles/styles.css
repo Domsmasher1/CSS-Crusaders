@@ -171,7 +171,7 @@ body { /* sets the proportions for the overall body of the webpage - Daniel Fran
 }
 
 .main { /* styles the main body of the document and sets its proportions - Daniel Frankish */
-  width: 50%;
+  width: 70%;
   padding: 10px;
   padding-bottom: 50px;
   background-color: #c0c0c0;
