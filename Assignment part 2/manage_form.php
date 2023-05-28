@@ -46,8 +46,11 @@
                 <label>Specify a applicant to view their EOIs (Only use if using View)</label><br>
                 <select name="option" id="option">
                 <?php
-                    foreach (getAllApplicats() as $option) {
-                        echo '<option value="' . $option . '">' . $option . '</option>';
+                    $i = 0;
+                    $users = getAllApplicats();
+                    foreach ($users[0] as $option) {
+                        echo '<option value="' . $users[1][$i] . '">' . $option . '</option>';
+                        $i ++;
                     } ?>
                 </select><br>
 
