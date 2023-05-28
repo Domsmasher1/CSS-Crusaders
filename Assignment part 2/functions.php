@@ -266,6 +266,7 @@
     /**
      * Gets all the job ref numbers
      * @return array a list of job ref numbers
+     * Author - Dominic White
      */
     function getAllEOIs(){
         $allData = findFromTable("*", "*", "EOI");
@@ -279,13 +280,16 @@
     /**
      * Get all the applicants names and EOI number
      * @return array a list of all applicants and their EOI number
+     * Author - Dominic White
      */
     function getAllApplicats(){
         $allData = findFromTable("*", "*", "EOI");
         $user = array();
+        $id = array();
         foreach($allData as $data){
             $user[] = "$data[FirstName] $data[LastName] ($data[EOInumber])";
+            $id[] = $data['EOInumber'];
         }
-        return ($user);
+        return ([$user, $id]);
     }
 ?>
