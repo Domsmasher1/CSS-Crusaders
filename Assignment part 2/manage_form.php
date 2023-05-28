@@ -34,11 +34,11 @@
                 <label>Enter a Job Reference Number and select its new status:</label>
                 <input type="text" name="jobrefnum" required pattern="{5}"><br>
 
-                <input type ="radio" name="new" value="new" id="new" name="status">
+                <input type ="radio" name="stat" value="new" id="new" >
                 <label for="new">New</label><br>
-                <input type ="radio" name="current" value="current" id="current" name="status">
-                <label for="current">Current</label><br>
-                <input type ="radio" name="final" value="final" id="final" name="status">
+                <input type ="radio" name="stat"value="current" id="current" >
+                <label for="current">Current</label><br>s
+                <input type ="radio" name="stat" value="final" id="final" >
                 <label for="final">Final</label><br>
 
                 <div class="wrap50 padding10">
