@@ -272,7 +272,9 @@
         $allData = findFromTable("*", "*", "EOI");
         $jobRefNumbs = array();
         foreach($allData as $data){
-            $jobRefNumbs[] = $data["JobRefNum"];
+            if (!in_array($data["JobRefNum"], $jobRefNumbs)) {
+                $jobRefNumbs[] = $data["JobRefNum"];
+            }
         }
         return ($jobRefNumbs);
     }
