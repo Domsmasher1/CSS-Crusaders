@@ -263,4 +263,29 @@
       mysqli_close($connection);
     }
 
+    /**
+     * Gets all the job ref numbers
+     * @return array a list of job ref numbers
+     */
+    function getAllEOIs(){
+        $allData = findFromTable("*", "*", "EOI");
+        $jobRefNumbs = array();
+        foreach($allData as $data){
+            $jobRefNumbs[] = $data["JobRefNum"];
+        }
+        return ($jobRefNumbs);
+    }
+
+    /**
+     * Get all the applicants names and EOI number
+     * @return array a list of all applicants and their EOI number
+     */
+    function getAllApplicats(){
+        $allData = findFromTable("*", "*", "EOI");
+        $user = array();
+        foreach($allData as $data){
+            $user[] = "$data[FirstName] $data[LastName] ($data[EOInumber])";
+        }
+        return ($user);
+    }
 ?>
