@@ -25,26 +25,26 @@
             <h3>
                 <label>Display all EOIs </label><input type="checkbox" name="manageselection" value="allEOI"><br>
 
-                <label>Job Reference Number </label>
-                <select name="jobRefNum" id="jobRefNum">
-                <?php
-                    foreach (getAllEOIs() as $option) {
-                        echo '<option value="' . $option . '">' . $option . '</option>';
-                    } ?>
-                </select><br>
+                <label>What would you like to do with the EOI table:</label><br>
+                    <label for="view">View </label>
+                    <input type="radio" name="doing" value="view" id="view" required>
 
-                <label>What would you like to do with the EOI table</label><br>
-                    <label for="option1">View</label>
-                    <input type="radio" name="option" value="option1" id="option1" required>
+                    <label for="delete">Delete</label>
+                    <input type="radio" name="doing" value="delete" id="delete" required>
 
-                    <label for="option2">Delete</label>
-                    <input type="radio" name="option" value="option2" id="option2" required>
+                    <label for="update">Update Status</label>
+                    <input type="radio" name="doing" value="update" id="update" required><br><br>
 
-                    <label for="option3">Update Status</label>
-                    <input type="radio" name="option" value="option3" id="option3" required><br>
+                <label>If you are viewing or deleting, which method would you like to use:</label><br>
+                    <label for="JobRefNumber">Job Reference Number </label>
+                    <input type="radio" name="using" value="JobRefNumber" id="JobRefNumber" required>
 
-                <label>Specify a applicant to view their EOIs (Only use if using View)</label><br>
-                <select name="option" id="option">
+                    <label for="name">&emsp;&emsp; Name </label>
+                    <input type="radio" name="using" value="name" id="name" required><br><br>
+
+                <p class="centerText">Only select the one you are using:</p>
+                <label for="name">Name: </label>
+                <select name="name" id="name">
                 <?php
                     $i = 0;
                     $users = getAllApplicats();
@@ -54,6 +54,14 @@
                     } ?>
                 </select><br>
 
+                <label for="jobRefNum">Job Reference Number: </label>
+                <select name="jobRefNum" id="jobRefNum">
+                <?php
+                    foreach (getAllEOIs() as $option) {
+                        echo '<option value="' . $option . '">' . $option . '</option>';
+                    } ?>
+                </select><br><br>
+
                 <label>Status to update (Only use if using update status)<label><br>
                 <input type ="radio" value="new" id="new" name="status">
                 <label for="new">New </label>
@@ -61,10 +69,10 @@
                 <label for="current">Current </label>
                 <input type ="radio" value="final" id="final" name="status">
                 <label for="final">Final</label>
-
+                <br><br>
                 <div class="wrap50 padding10">
                 <input type="submit" value="Submit" class="buttonGeneral">
-                </div>
+                </div><br>
             </h3>
         </form>
 
