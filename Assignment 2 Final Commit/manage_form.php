@@ -27,20 +27,20 @@
 
                 <label>What would you like to do with the EOI table:</label><br>
                     <label for="view">View </label>
-                    <input type="radio" name="doing" value="view" id="view" required>
+                    <input type="radio" name="doing" value="view" id="view">
 
                     <label for="delete">Delete</label>
-                    <input type="radio" name="doing" value="delete" id="delete" required>
+                    <input type="radio" name="doing" value="delete" id="delete">
 
                     <label for="update">Update Status</label>
-                    <input type="radio" name="doing" value="update" id="update" required><br><br>
+                    <input type="radio" name="doing" value="update" id="update"><br><br>
 
                 <label>If you are viewing or deleting, which method would you like to use:</label><br>
                     <label for="JobRefNumber">Job Reference Number </label>
-                    <input type="radio" name="using" value="JobRefNumber" id="JobRefNumber" required>
+                    <input type="radio" name="using" value="JobRefNumber" id="JobRefNumber">
 
                     <label for="name">&emsp;&emsp; Name </label>
-                    <input type="radio" name="using" value="name" id="name" required><br><br>
+                    <input type="radio" name="using" value="name" id="name"><br><br>
 
                 <p class="centerText">Only select the one you are using:</p>
                 <label for="name">Name: </label>
@@ -84,3 +84,4 @@
         </footer>
 </body>
 </html>
+
