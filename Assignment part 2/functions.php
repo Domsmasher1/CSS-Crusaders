@@ -249,7 +249,6 @@
       } else {
         $mysqli_msg = "Error updating EOI status: " . mysqli_error($connection);
       }
-      mysqli_close($connection);
     }
 
     /**
@@ -260,7 +259,9 @@
         $allData = findFromTable("*", "*", "EOI");
         $jobRefNumbs = array();
         foreach($allData as $data){
-            $jobRefNumbs[] = $data["JobRefNum"];
+            if (!in_array($data["JobRefNum"], $jobRefNumbs)) {
+                $jobRefNumbs[] = $data["JobRefNum"];
+            }
         }
         return ($jobRefNumbs);
     }
