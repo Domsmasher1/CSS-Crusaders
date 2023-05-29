@@ -200,7 +200,6 @@
             return $value;
         }
     }
-
     /**
      * Lists all the fields in the EOI table
      * @return array - returns all the fields in the EOI table
@@ -217,21 +216,11 @@
      * @return array - Returns the needed fields in the EOI table
      * Author - Jack Spong
      */
-    function listPosition($position) {
-        $result = findFromTable("JobRefNum", $position, "EOI");
+    function listPosition($EOInum) {
+        $result = findFromTable("EOInumber", $EOInum, "EOI");
         return $result;
     }
 
-    /**
-     * List EOIs for a particular applicant
-     * @param string $name - Name of the applicant
-     * @return array - Returns the EOIs from the applicant
-     * Author - Jack Spong
-     */
-    function listApplicant($name) {
-        $result = findFromTable("FirstName", $name, "EOI");
-        return $result;
-    }
 
     /**
      * Delete EOIs with a specified job reference number
@@ -239,8 +228,8 @@
      * @return string - The result from the deletion
      * Author - Jack Spong
      */
-    function deleteEntry($position) {
-        $result = deleteFromTable("JobRefNum", $position, "EOI");
+    function deleteEntry($EOInum) {
+        $result = deleteFromTable("EOInumber", $EOInum, "EOI");
         return $result;
     }
 
@@ -252,9 +241,9 @@
      * @return void - Returns nothing
      * Author - Jack Spong
      */
-    function statusChange($JobRN, $new_status) {
+    function statusChange($EOInum, $new_status) {
       $connection = $_SESSION["Connection"];
-      $sql = "UPDATE EOI SET Stat = '$new_status' WHERE JobRefNum = '$JobRN'";
+      $sql = "UPDATE EOI SET Stat = '$new_status' WHERE EOInumber = '$EOInum'";
       if (mysqli_query($connection, $sql)) {
         $mysqli_msg = "EOI status has been updated successfully. ";
       } else {
@@ -266,15 +255,12 @@
     /**
      * Gets all the job ref numbers
      * @return array a list of job ref numbers
-     * Author - Dominic White
      */
     function getAllEOIs(){
         $allData = findFromTable("*", "*", "EOI");
         $jobRefNumbs = array();
         foreach($allData as $data){
-            if (!in_array($data["JobRefNum"], $jobRefNumbs)) {
-                $jobRefNumbs[] = $data["JobRefNum"];
-            }
+            $jobRefNumbs[] = $data["JobRefNum"];
         }
         return ($jobRefNumbs);
     }
