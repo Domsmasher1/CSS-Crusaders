@@ -15,6 +15,8 @@ $EOI_table = "CREATE TABLE EOI (
     JobRefNum INT(10),
     FirstName VARCHAR(250),
     LastName VARCHAR(250),
+    DOB VARCHAR(250),
+    Gender VARCHAR(250),
     StreetAddress VARCHAR(250),
     Suburb VARCHAR(250),
     State VARCHAR(250),
