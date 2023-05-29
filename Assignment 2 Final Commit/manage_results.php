@@ -7,13 +7,14 @@
     <meta name ="Viewport" content="width=device-width, initial scale=1.0">
     <link href="styles/styles.css" rel="stylesheet" media="screen and (max-width: 1920px)">
     <title>login</title>
+    
     <?php include 'header.inc';
     $table = false;
     $mysqli_msg = [];
     $comf_messg = [];
 
 
-    if($_POST["using"] == "JobRefNumber")
+    if(isset($_POST["using"]) and $_POST["using"] == "JobRefNumber")
     {
         $jobrefnum = $_POST["jobRefNum"];
         $EOIArray= findFromTable("JobRefNum", $jobrefnum, "EOI");
@@ -26,7 +27,7 @@
 
 
     }
-    elseif($_POST["using"] == "name")
+    elseif(isset($_POST["using"]) and $_POST["using"] == "name")
     {
         $EOInum = $_POST["name"];
         $jobrefnumArray= findFromTable("EOInumber", $EOInum, "EOI");
@@ -117,7 +118,7 @@
         <?php include 'menu.inc' ?>
     </header>
     <article class="main">
-    <h2>EOI Table</h2>
+    <h2 class="centerText">EOI Table</h2><br>
     <?php
     foreach($comf_messg as $msg)
     {
@@ -155,12 +156,30 @@
         </tbody>
     </table>
     <?php } ?>
+    <br>
+    <br>
+    <div class = "wrap50">
+        <div class="floatLeft padding10">
+            <a href="manage_form.php" class="buttonGeneral elementLeft">Back</a>
+        </div>
+    </div>
     </article>
     <footer>
         <?php include 'footer.inc' ?>
     </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
