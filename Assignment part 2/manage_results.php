@@ -9,22 +9,29 @@
     <title>login</title> 
     <?php include 'header.inc'; 
     $table = false;
-    $mysqli_msg = ""; 
-    $comf_messg = "";
+    $mysqli_msg = []; 
+    $comf_messg = [];
 
 
     if($_POST["using"] == "JobRefNumber")
     {
         $jobrefnum = $_POST["jobRefNum"];
         $EOIArray= findFromTable("JobRefNum", $jobrefnum, "EOI");
-        $EOInum = $EOIArray[0]["EOInumber"];
+        $EOInums = [];
+        foreach($EOIArray as $Array)
+        {
+        $EOInums[] = $Array["EOInumber"];
+        }
+
+        
+
     }
     elseif($_POST["using"] == "name")
     {
         $EOInum = $_POST["name"];
         $jobrefnumArray= findFromTable("EOInumber", $EOInum, "EOI");
-        $jobrefnum = $jobrefnumArray[0]["JobRefNum"];
-
+        $jobrefnum = $jobrefnumArray[0]["JobRefNum"]; 
+        
     }
 
 
@@ -34,13 +41,23 @@
 
 
     } elseif ($_POST["doing"] == "view") {
-
-        $result = listPosition($EOInum);
+        $result = [];
+        foreach($EOInums as $Array)
+        {
+        $result_temp = listPosition($Array);
+        $result[] = $result_temp[0];
+        }
         $table = true;
         
     } elseif ($_POST["doing"] == "delete") {
+        $comf_messg = [];
+        foreach($EOInums as $Array)
+        {
+        deleteEntry($Array);
+        }
 
-        $comf_messg = deleteEntry($EOInum);
+        $comf_messg[] = "Entries were sucsessfuly deleted";
+
         $table = false;
 
     } elseif ($_POST["doing"] == "update") {
@@ -48,24 +65,36 @@
 
         if ($_POST["status"] == "new")
         {
-            $stat = "New";
-            statusChange($EOInum, $stat); 
-            $comf_messg = "Job: $jobrefnum has been succsessfuly updated to New";
 
+            $stat = "New";
+            foreach($EOInums as $Array)
+            {
+            statusChange($Array, $stat);
+            }
+            $comf_messg[] = "Job: $jobrefnum has been succsessfuly updated to New";
+
+            
         }
 
         elseif($_POST["status"] == "current")
         {
             $stat = "Current";
-            statusChange($EOInum, $stat); 
-            $comf_messg = "Job: $jobrefnum has been succsessfuly updated to Current";
+            foreach($EOInums as $Array)
+            {
+            statusChange($Array, $stat);
+            }
+            $comf_messg[] = "Job: $jobrefnum has been succsessfuly updated to Current";
+
         }
 
         elseif($_POST["status"] == "final")
         {
             $stat = "Final";
-            statusChange($EOInum, $stat); 
-            $comf_messg = "Job: $jobrefnum has been succsessfuly updated to Final";
+            foreach($EOInums as $Array)
+            {
+            statusChange($Array, $stat);
+            }
+            $comf_messg[] = "Job: $jobrefnum has been succsessfuly updated to Final";
         }
 
         else {
@@ -88,7 +117,10 @@
     <article class="main">
     <h2>EOI Table</h2>
     <?php 
-    echo $mysqli_msg . $comf_messg; 
+    foreach($comf_messg as $msg)
+    {
+        echo $msg; 
+    }
     if ($table == true) { ?>
     <table>
         <thead> 
@@ -127,6 +159,12 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
+
 
 
 
