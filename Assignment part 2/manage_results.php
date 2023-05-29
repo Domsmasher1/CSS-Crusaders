@@ -31,6 +31,8 @@
         $EOInum = $_POST["name"];
         $jobrefnumArray= findFromTable("EOInumber", $EOInum, "EOI");
         $jobrefnum = $jobrefnumArray[0]["JobRefNum"]; 
+        $EOInums = []; 
+        $EOInums[] = $EOInum; 
         
     }
 
