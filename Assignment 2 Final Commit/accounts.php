@@ -89,8 +89,11 @@
         </form>
         <div class = "wrap50">
             <br>
-            <div class ="padding10">
+            <div class ="floatLeft padding10">
                 <a href="manage_form.php" class="buttonGeneral">Management</a>
+            </div>
+            <div class="floatRight padding10">
+                <a href="CreateEoiTable.php" class="buttonGeneral elementRight">Create EOI</a>
             </div>
         </div>
         </article>

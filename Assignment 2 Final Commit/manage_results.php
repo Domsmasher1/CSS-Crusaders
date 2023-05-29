@@ -7,7 +7,7 @@
     <meta name ="Viewport" content="width=device-width, initial scale=1.0">
     <link href="styles/styles.css" rel="stylesheet" media="screen and (max-width: 1920px)">
     <title>login</title>
-    
+
     <?php include 'header.inc';
     $table = false;
     $mysqli_msg = [];
@@ -169,28 +169,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
